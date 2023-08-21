@@ -159,6 +159,7 @@ RUN apt-get update &&\
     apt-get install -y --no-install-recommends \
 	 git \
      zip \
+     unzip \
     software-properties-common &&\
 	add-apt-repository -y 'ppa:deadsnakes/ppa' &&\
 	apt-get update && \
@@ -170,11 +171,14 @@ RUN apt-get update &&\
     rm -rf /var/lib/apt/lists/*
 
 
-RUN apt-get update && apt-get install -y git zip unzip && \
+RUN apt-get update && \
     pip install "poetry==1.1.13"
 
-COPY pyproject.toml poetry.lock ./
-RUN poetry install --no-dev --no-root
+# Installing main dependencies
+ARG FLYWHEEL=/flywheel/v0
+COPY pyproject.toml poetry.lock $FLYWHEEL/
+WORKDIR $FLYWHEEL
+RUN poetry install --no-root --no-dev
 
 COPY run.py manifest.json $FLYWHEEL/
 COPY fw_gear_afni_curator $FLYWHEEL/fw_gear_afni_curator
