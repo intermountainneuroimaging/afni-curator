@@ -2,11 +2,11 @@
   "name": "afni-curator",
   "label": "AFNI Curator",
   "description": "Curates a container in the flywheel hierarchy given a python HierarchyCurator class. Using an implementation of the HierarchyCurator Class (provided as an input file (e.g., curator.py)) this gear is able to curate an entire project, walking down the hierarchy through project, subject, session, acquisition, analysis, and file containers.",
-  "version": "2.1.4_20.0.0_inc0.1rc1",
+  "version": "2.1.4_20.0.0_inc0.1rc2",
   "custom": {
     "gear-builder": {
       "category": "analysis",
-      "image": "amhe4269/afni-curator:2.1.4_20.0.0_inc0.1rc1"
+      "image": "amhe4269/afni-curator:2.1.4_20.0.0_inc0.1rc2"
     },
     "flywheel": {
       "suite": "Curation"
@@ -54,7 +54,7 @@
     }
   },
   "environment": {
-    "PATH": "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "PATH": "/root/abin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
     "LANG": "C.UTF-8",
     "GPG_KEY": "E3FF2839C048B25C084DEBE9B26995E310250568",
     "PYTHON_VERSION": "3.8.13",
