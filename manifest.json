@@ -1,12 +1,12 @@
 {
   "name": "afni-curator",
   "label": "AFNI Curator",
-  "description": "Curates a container in the flywheel hierarchy given a python HierarchyCurator class. Using an implementation of the HierarchyCurator Class (provided as an input file (e.g., curator.py)) this gear is able to curate an entire project, walking down the hierarchy through project, subject, session, acquisition, analysis, and file containers.",
-  "version": "2.1.4_20.0.0_inc0.1rc2",
+  "description": "Adapted from Flywheel hierarchy-curator gear. Includes independent AFNI installation which can be called within the curator or as a afni pipeline passed as additional input. Curates a container in the flywheel hierarchy given a python HierarchyCurator class. Using an implementation of the HierarchyCurator Class (provided as an input file (e.g., curator.py)) this gear is able to curate an entire project, walking down the hierarchy through project, subject, session, acquisition, analysis, and file containers.",
+  "version": "2.1.4_20.0.0_inc0.1",
   "custom": {
     "gear-builder": {
       "category": "analysis",
-      "image": "amhe4269/afni-curator:2.1.4_20.0.0_inc0.1rc2"
+      "image": "amhe4269/afni-curator:2.1.4_20.0.0_inc0.1"
     },
     "flywheel": {
       "suite": "Curation"
@@ -65,10 +65,10 @@
     "FLYWHEEL": "/flywheel/v0"
   },
   "command": "poetry run python run.py",
-  "author": "Flywheel",
-  "maintainer": "Flywheel <support@flywheel.io>",
+  "author": "Intermountain Neuroimaging Consortium",
+  "maintainer": "Amy Hegarty <amhe4260@colorado.edu>",
   "cite": "",
   "license": "MIT",
-  "source": "https://gitlab.com/flywheel-io/flywheel-apps/hierarchy-curator",
-  "url": "https://gitlab.com/flywheel-io/flywheel-apps/hierarchy-curator"
+  "source": "https://github.com/intermountainneuroimaging/afni-curator",
+  "url": "https://github.com/intermountainneuroimaging/afni-curator"
 }
